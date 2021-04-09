@@ -1,3 +1,6 @@
+/*jshint esversion: 6 */
+
+
 // Requiring Modules
 const hbs = require("hbs");
 const path = require("path");
@@ -25,16 +28,16 @@ hbs.registerPartials(partialsPath);
 
 // Request and Response Handling ( Routing )
 app.get('/', (req, res) => {
-   res.render('index.hbs')
+   res.render('index.hbs');
 });
 app.get('/about', (req, res) => {
-   res.render('about.hbs')
+   res.render('about.hbs');
 });
 app.get('/temp', (req, res) => {
-   res.render('temp.hbs')
+   res.render('temp.hbs');
 });
 app.get("*", (req, res) => {
-   res.render('err.hbs')
+   res.render('err.hbs');
 });
 
 
