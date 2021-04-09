@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --main-bg: #1e272e;
+    --main-color: #0097e6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    margin: 0;
+}
+
+.main_menu {
+    background-color: var(--main-bg);
+}
+
+.navbar {
+    color: #fff;
+    background-color: var(--main-bg);
+    padding: 2rem 0;
+}
+
+.navbar li {
+    margin-left: 2rem;
+}
+
+.navbar a {
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.navbar a:hover {
+    color: var(--main-color);
+}
+
+.navbar-toggler-icon {
+    background-color: #fff;
+}
+
+.fa-snowflake {
+    transition: all linear;
+    -webkit-transition: all linear;
+    -moz-transition: all linear;
+    -ms-transition: all linear;
+    -o-transition: all linear;
+    animation: rotate 2s linear infinite;
+    -webkit-animation: rotate 2s linear infinite;
+    color: var(--main-color);
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+
+.main_header_left {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.main_header_left p {
+    font-size: 2rem;
+}
+
+.main_header_left h1 {
+    font-size: 4rem;
+    margin: 1rem 0 4rem 0;
+    text-transform: capitalize;
+}
+
+.main_header_left .text_clr {
+    color: var(--main-color);
+}
+
+.main_header_left button {
+    border: none;
+    padding: 0.8rem 1.8rem;
+    font-size: 1.4rem;
+    border-radius: 2rem;
+    -webkit-border-radius: 2rem;
+    -moz-border-radius: 2rem;
+    -ms-border-radius: 2rem;
+    -o-border-radius: 2rem;
+    text-transform: uppercase;
+    box-shadow: 0 8px 6px -6px #000;
+}
+
+.main_header_left button:hover {
+    color: var(--main-color);
+    box-shadow: 0 8px 6px -6px var(--main-color);
+}
+
+.main_header_right {
+    height: 70rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main_header_right figure img {
+    filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.726));
+    -webkit-filter: drop-shadow(0 1rem 1rem rgba(0, 0, 0, 0.726));
+}
+
+#searchInputForm {
+    width: 75%;
+    position: relative;
+    margin: 10rem auto 5rem;
+}
+
+#cityName {
+    width: 100%;
+    padding: 2rem 5rem 2rem 2rem;
+    background-color: #1e202b;
+    color: #fff;
+    border: none;
+    outline: none;
+    font-size: 1.3rem;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+}
+
+::placeholder {
+    letter-spacing: .1rem;
+    color: #fff;
+}
+
+#submitBtn {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    bottom: 5px;
+    border: none;
+    border-radius: 3rem;
+    -webkit-border-radius: 3rem;
+    -moz-border-radius: 3rem;
+    -ms-border-radius: 3rem;
+    -o-border-radius: 3rem;
+    background: #009ad8;
+    padding: 0 3rem;
+    color: #fff;
+    font-size: 1.7rem;
+    letter-spacing: .1rem;
+}
+
+#submitBtn:hover {
+    color: #009ad8;
+    background: #fff;
+    transition: all ease .5s;
+    -webkit-transition: all ease .5s;
+    -moz-transition: all ease .5s;
+    -ms-transition: all ease .5s;
+    -o-transition: all ease .5s;
+}
+
+.outputBox {
+    width: 50rem;
+    margin: auto;
+    min-height: 25rem;
+    background-color: #323544;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: 1rem;
+}
+
+#dayDate {
+    text-transform: uppercase;
+    width: 100%;
+    height: 20%;
+    background-color: #2d303d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 1rem;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
+    padding: .7rem;
+}
+
+#dayDate p {
+    font-size: 1.2rem;
+    letter-spacing: .2rem;
+    color: #fff;
+    font-weight: 300;
+}
+
+#weatherOutput {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+}
+
+#city {
+    letter-spacing: .2rem;
+    padding: 1rem 0;
+    color: #bfc1c8;
+    font-weight: 300;
+    font-size: 1.7rem;
+}
+
+#weather {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+}
+
+#temp, .fa {
+    font-size: 5rem;
+    font-weight: 900;
+}
+
+#temp {
+    margin-top: 1.3rem;
+}
+
+.fa {
+    font-size: 10rem;
+}
+
+.fa-sun {
+    color: #ffa500;
+}
+
+.fa-cloud {
+    color: #009ad8;
+}
+
+.data_hide {
+    visibility: hidden;
+    transition: all 0.3s linear;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+}
+
+.errimg {
+    width: 60rem;
+    height: 60rem;
+}
+
+footer {
+    margin-top: auto;
+    width: 100%;
+    background-color: var(--main-bg);
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+    color: #fff;
+    font-size: 1.4rem;
+    line-height: 5rem;
+}
+
+@media(max-width: 768px) {
+    .main_header_left {
+        height: auto;
+        margin: 5rem 0;
+    }
+    .main_header_right {
+        height: auto;
+        margin-top: 3rem;
+        margin-bottom: 7rem;
+    }
+    .searchBox {
+        width: auto;
+    }
+    .outputBox {
+        width: auto;
+    }
+}
